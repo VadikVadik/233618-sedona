@@ -20,7 +20,7 @@
     <main>
         <div class="container">
             <div class="catalog_filter">
-                <form action="" method="get" oninput="priceoutput.value=price.value">
+                <form action="#" method="get" oninput="priceoutput.value=price.value">
                     <div class="features">
                         <p>Инфраструктура:</p>
                         <input id="pool" type="checkbox" name="pool">
@@ -41,7 +41,7 @@
                     </div>
                     <div class="prise_and_result">
                         <label for="price">Стоимость в сутки (Р):</label><br>
-                        <input type="output" name="priceoutput"><br>
+                        <output name="priceoutput"></output><br>
                         <input id="price" name="price" type="range" min="100" max="100000" step="100"><br>
                         <button type="button">Показать</button>
                     </div>
