@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Седона</title>
 </head>
 <body>
     <header class="main_head">
         <div class="container">
-            <img class="logo" src="http://placehold.it/137x70" alt="sedona" width="137" height="70">
+            <a href="#"><img class="logo" src="img/logo.png" alt="Логотип" width="137" height="70"></a>
             <nav class="main_menu">
                 <ul>
                     <li><a href="#">Информация</a></li>
@@ -16,75 +17,84 @@
                     <li><a href="#">Гостиницы</a></li>
                 </ul>
             </nav>
-            <!-- Изображение с текстом Welcome... может быть фоном к .main_head .container? -->
-            <div class="description">
-                <h3>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h3>
-                <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-            </div>
         </div>
     </header>
     <main>
         <div class="container">
             <div class="reasons">
-                <div class="reasons_item reasons_one_two">
+                <div class="main_description">
+                    <h3>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h3>
+                    <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+                </div>
+            </div>
+            
+            <div class="reasons">
+                <div class="reasons_one_two">
                     <h3>Настоящий городок</h3>
-                    <p>№1</p>
+                    <span>№1</span>
                     <p>СЕДОНА — НЕ АТTРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
                 </div>
-                <div class="reasons_item reasons_image">
-                    <img src="http://placehold.it/800x257" alt="sedona" width="800" height="257">
+                <div class="reasons_img">
+                     <img src="img/content-img1.jpg" alt="Город Седона" width="800" height="257">
                 </div>
-                <div class="reasons_item reasons_features">
+            </div>
+            <div class="reasons">
+                <div class="reasons_features">
                     <h3>ЖИЛЬЕ</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </div>
-                <div class="reasons_item reasons_features">
+                <div class="reasons_features">
                     <h3>ЕДА</h3>
                     <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </div>
-                <div class="reasons_item reasons_features">
+                <div class="reasons_features">
                     <h3>СУВЕНИРЫ</h3>
                     <p>Не только китайского, но и местного производства!</p>
                 </div>
-                <div class="reasons_item reasons_image">
-                    <img src="http://placehold.it/800x257" alt="sedona" width="800" height="257">
+            </div>
+            <div class="reasons">
+                <div class="reasons_img">
+                    <img src="img/content-img2.jpg" alt="Мост дьявола в Седоне" width="800" height="257">
                 </div>
-                <div class="reasons_item reasons_one_two">
+                <div class="reasons_one_two">
                     <h3>Там есть мост дьявола</h3>
-                    <p>№2</p>
+                    <span>№2</span>
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </div>
-                <div class="reasons_item reasons_three_to_five">
+            </div>
+            <div class="reasons">
+                <div class="reasons_three_to_five">
                     <h3>Небольшая площадь</h3>
-                    <p>№3</p>
+                    <span>№3</span>
                     <p>ВСЕ достопримечательности находятся очень близко</p>
                 </div>
-                <div class="reasons_item reasons_three_to_five">
+                <div class="reasons_three_to_five">
                     <h3>Красивая дорога</h3>
-                    <p>№4</p>
+                    <span>№4</span>
                     <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
                 </div>
-                <div class="reasons_item reasons_three_to_five">
+                <div class="reasons_three_to_five">
                     <h3>Мало туристов</h3>
-                    <p>№5</p>
+                    <span>№5</span>
                     <p>Большинство едет в гранд каньон и толпится там</p>
                 </div>
             </div>
+            
             <div class="hotel_search">
                 <div class="hotel_search_head">
                     <h2>Заинтересовались?</h2>
                     <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
                 </div>
                 <div class="hotel_search_map">
-                    <img src="http://placehold.it/1200x594" alt="sedona_map" width="1200" height="594">
+                    <img src="img/map.jpg" alt="Седона на карте" width="1200" height="594">
                 </div>
                 <div class="hotel_search_form">
-                    <button class="switch" type="button">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</button>
+                    <a class="switch" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
                     <form action="#" method="get">
                         <label for="check_in_date">Дата заезда:</label>
-                        <input id="check_in_date" type="date" name="check_in"><br>
+                        <input id="check_in_date" type="text" name="check_in"><img src="img/calendar-ico.png" alt=""><br>
                         <label for="check_out_date">Дата выезда:</label>
-                        <input id="check_out_date" type="date" name="check_out"><br>
+                        <input id="check_out_date" type="text" name="check_out"><img src="img/calendar-ico.png" alt=""><br>
                         <label for="adults">Взрослые:</label>
                         <input id="adults" type="number" name="adults" min="0" step="1">
                         <label for="children">Дети:</label>
@@ -102,14 +112,14 @@
             </div>
             <div class="social_block">
                 <div class="social_icons">
-                    <a href="#"><img src="http://placehold.it/46x48" alt="twitter" width="46" height="48"></a>
-                    <a href="#"><img src="http://placehold.it/46x48" alt="fb" width="46" height="48"></a>
-                    <a href="#"><img src="http://placehold.it/46x48" alt="youtube" width="46" height="48"></a>
+                    <a href="#"><img src="img/twitter-ico.png" alt="Наш аккаунт в Twitter" width="46" height="48"></a>
+                    <a href="#"><img src="img/fb-ico.png" alt="Наша страница на Facebook" width="46" height="48"></a>
+                    <a href="#"><img src="img/youtube-ico.png" alt="Наш канал на Youtube" width="46" height="48"></a>
                 </div>
             </div>
             <div class="author_block">
                 <p>WEBSITE by</p>
-                <a href="#"><img src="http://placehold.it/113x39" alt="sedona_map" width="113" height="39"></a>
+                <a href="#"><img src="img/htmlacademy-logo.png" alt="Сайт разработчика" width="113" height="39"></a>
             </div>        
         </div>
     </footer>

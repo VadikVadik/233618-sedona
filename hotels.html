@@ -2,12 +2,13 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>Седона: каталог</title>
 </head>
 <body>
     <header class="catalog_head">
         <div class="container">
-            <img class="logo" src="http://placehold.it/137x70" alt="sedona" width="137" height="70">
+            <a href="#"><img class="logo" src="img/logo.png" alt="Логотип" width="137" height="70"></a>
             <nav class="main_menu">
                 <ul>
                     <li><a href="#">Информация</a></li>
@@ -23,7 +24,7 @@
             <div class="catalog_filter">
                 <form action="#" method="get" oninput="priceoutput.value=price.value">
                     <div class="features">
-                        <p>Инфраструктура:</p>
+                        <h4>Инфраструктура:</h4>
                         <input id="pool" type="checkbox" name="pool">
                         <label for="pool">Бассейн</label><br>
                         <input id="parking" type="checkbox" name="parking">
@@ -32,7 +33,7 @@
                         <label for="wifi">Wi-Fi</label><br>
                     </div>
                     <div class="hotel_type">
-                        <p>Тип жилья:</p>
+                        <h4>Тип жилья:</h4>
                         <input id="hotel" type="checkbox" name="hotel">
                         <label for="hotel">Гостиница</label><br>
                         <input id="hostel" type="checkbox" name="hostel">
@@ -44,7 +45,7 @@
                         <label for="price">Стоимость в сутки (Р):</label><br>
                         <output name="priceoutput"></output><br>
                         <input id="price" name="price" type="range" min="100" max="100000" step="100"><br>
-                        <button type="button">Показать</button>
+                        <button type="submit">Показать</button>
                     </div>
                 </form>
             </div>
@@ -52,51 +53,61 @@
                 <div class="search_result_head">
                     <h3>НАЙДЕНО: 3</h3>
                     <div class="sorting">
-                        <p>СОРТИРОВКА:</p>
+                        <div class="sorting_head">СОРТИРОВКА:</div>
                         <ul>
                             <li class="active"><a href="#">ПО ЦЕНЕ</a></li>
                             <li><a href="#">ПО ТИПУ</a></li>
                             <li><a href="#">ПО РЕЙТИНГУ</a></li>
                         </ul>
+                        <div class="sort_direction">
+                            <a href="#"><span></span></a>
+                            <a href="#"><span></span></a>
+                        </div>
                     </div>
                 </div>
                 <div class="search_result_item">
                     <div class="item_preview">
-                        <img src="http://placehold.it/135x90" alt="amara" width="135" height="90">
+                        <img src="img/amara-resort-preview.jpg" alt="Изображение гостиницы Amara Resort & Spa" width="135" height="90">
+                    </div>
+                    <div class="item_preview_description">    
                         <h3>Amara Resort & Spa</h3>
-                        <p>гостиница</p>
-                        <p>от 3500 р.</p>
-                        <p><a class="more_btn" href="#">Подробнее</a></p>
-                        <p><a class="book_btn" href="#">Забронировать</a></p>
+                        <span>гостиница</span>
+                        <span>от 3500 р.</span>
+                        <a class="more_btn" href="#">Подробнее</a>
+                        <a class="book_btn" href="#">Забронировать</a>
                     </div>
                     <div class="rating">
-                        <p>Рейтинг: 8.5</p>                    
+                        <div>Рейтинг: 8.5</div>                    
                     </div>
                 </div>
                 <div class="search_result_item">
                     <div class="item_preview">
-                        <img src="http://placehold.it/135x90" alt="amara" width="135" height="90">
+                        <img src="img/desert-preview.jpg" alt="Изображение мотеля Desert Quail Inn" width="135" height="90">
+                    </div>
+                    <div class="item_preview_description">
                         <h3>Desert Quail Inn</h3>
-                        <p>мотель</p>
-                        <p>от 2000 р.</p>
-                        <p><a class="more_btn" href="#">Подробнее</a></p>
-                        <p><a class="book_btn" href="#">Забронировать</a></p>
+                        <span>мотель</span>
+                        <span>от 2000 р.</span>
+                        <a class="more_btn" href="#">Подробнее</a>
+                        <a class="book_btn" href="#">Забронировать</a>
                     </div>
                     <div class="rating">
-                        <p>Рейтинг: 8.9</p>                    
+                        <div>Рейтинг: 8.9</div>                    
                     </div>
                 </div>
                 <div class="search_result_item">
                     <div class="item_preview">
-                        <img src="http://placehold.it/135x90" alt="amara" width="135" height="90">
+                        <img src="img/villas-preview.jpg" alt="Изображение аппартаментов Villas at Poco Diablo" width="135" height="90">
+                    </div>
+                    <div class="item_preview_description">
                         <h3>Villas at Poco Diablo</h3>
-                        <p>апартаменты</p>
-                        <p>от 4000 р.</p>
-                        <p><a class="more_btn" href="#">Подробнее</a></p>
-                        <p><a class="book_btn" href="#">Забронировать</a></p>
+                        <span>апартаменты</span>
+                        <span>от 4000 р.</span>
+                        <a class="more_btn" href="#">Подробнее</a>
+                        <a class="book_btn" href="#">Забронировать</a>
                     </div>
                     <div class="rating">
-                        <p>Рейтинг: 9.2</p>                    
+                        <div>Рейтинг: 9.2</div>                    
                     </div>
                 </div>
             </div>
@@ -109,14 +120,14 @@
             </div>
             <div class="social_block">
                 <div class="social_icons">
-                    <a href="#"><img src="http://placehold.it/46x48" alt="twitter" width="46" height="48"></a>
-                    <a href="#"><img src="http://placehold.it/46x48" alt="fb" width="46" height="48"></a>
-                    <a href="#"><img src="http://placehold.it/46x48" alt="youtube" width="46" height="48"></a>
+                    <a href="#"><img src="img/twitter-ico.png" alt="Наш аккаунт в Twitter" width="46" height="48"></a>
+                    <a href="#"><img src="img/fb-ico.png" alt="Наша страница на Facebook" width="46" height="48"></a>
+                    <a href="#"><img src="img/youtube-ico.png" alt="Наш канал на Youtube" width="46" height="48"></a>
                 </div>
             </div>
             <div class="author_block">
                 <p>WEBSITE by</p>
-                <a href="#"><img src="http://placehold.it/113x39" alt="sedona_map" width="113" height="39"></a>
+                <a href="#"><img src="img/htmlacademy-logo.png" alt="Сайт разработчика" width="113" height="39"></a>
             </div>        
         </div>
     </footer>
