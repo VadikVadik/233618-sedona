@@ -6,8 +6,9 @@
     <title>Седона: каталог</title>
 </head>
 <body>
+    <div class="container">
     <header class="catalog_head">
-        <div class="container">
+        <!--<div class="container">-->
             <a href="#"><img class="logo" src="img/logo.png" alt="Логотип" width="137" height="70"></a>
             <nav class="main_menu">
                 <ul>
@@ -17,12 +18,12 @@
                     <li><a href="#">Гостиницы</a></li>
                 </ul>
             </nav>
-        </div>
+        <!--</div>-->
     </header>
     <main>
-        <div class="container">
-            <div class="catalog_filter">
-                <form action="#" method="get" oninput="priceoutput.value=price.value">
+        <!--<div class="container">-->
+            <div class="catalog_filter clearfix">
+                <form class="clearfix" action="#" method="get" oninput="priceoutput.value=price.value">
                     <div class="features">
                         <h4>Инфраструктура:</h4>
                         <input id="pool" type="checkbox" name="pool">
@@ -50,22 +51,20 @@
                 </form>
             </div>
             <div class="search_result">
-                <div class="search_result_head">
-                    <h3>НАЙДЕНО: 3</h3>
-                    <div class="sorting">
-                        <div class="sorting_head">СОРТИРОВКА:</div>
-                        <ul>
-                            <li class="active"><a href="#">ПО ЦЕНЕ</a></li>
-                            <li><a href="#">ПО ТИПУ</a></li>
-                            <li><a href="#">ПО РЕЙТИНГУ</a></li>
-                        </ul>
-                        <div class="sort_direction">
-                            <a href="#"><span></span></a>
-                            <a href="#"><span></span></a>
-                        </div>
+                <div class="search_result_head clearfix">
+                    <h3 class="sorting_item">НАЙДЕНО: 3</h3>
+                    <div class="sorting_head sorting_item">СОРТИРОВКА:</div>
+                    <ul class="sorting_item clearfix">
+                        <li class="active"><a href="#">ПО ЦЕНЕ</a></li>
+                        <li><a href="#">ПО ТИПУ</a></li>
+                        <li><a href="#">ПО РЕЙТИНГУ</a></li>
+                    </ul>
+                    <div class="sorting_item sort_direction">
+                        <a href="#"><span>1</span></a>
+                        <a href="#"><span>2</span></a>
                     </div>
                 </div>
-                <div class="search_result_item">
+                <div class="search_result_item clearfix">
                     <div class="item_preview">
                         <img src="img/amara-resort-preview.jpg" alt="Изображение гостиницы Amara Resort & Spa" width="135" height="90">
                     </div>
@@ -80,7 +79,7 @@
                         <div>Рейтинг: 8.5</div>                    
                     </div>
                 </div>
-                <div class="search_result_item">
+                <div class="search_result_item clearfix">
                     <div class="item_preview">
                         <img src="img/desert-preview.jpg" alt="Изображение мотеля Desert Quail Inn" width="135" height="90">
                     </div>
@@ -95,7 +94,7 @@
                         <div>Рейтинг: 8.9</div>                    
                     </div>
                 </div>
-                <div class="search_result_item">
+                <div class="search_result_item clearfix">
                     <div class="item_preview">
                         <img src="img/villas-preview.jpg" alt="Изображение аппартаментов Villas at Poco Diablo" width="135" height="90">
                     </div>
@@ -111,25 +110,26 @@
                     </div>
                 </div>
             </div>
-        </div>    
+        <!--</div>-->    
     </main>
-    <footer class="main_footer">
-        <div class="container">
-            <div class="subscribe">
+    <footer class="main_footer clearfix">
+        <!--<div class="container clearfix">-->
+            <div class="subscribe footer_block">
                 <a href="#">#VISITSEDONA</a>
             </div>
-            <div class="social_block">
+            <div class="social_block footer_block">
                 <div class="social_icons">
                     <a href="#"><img src="img/twitter-ico.png" alt="Наш аккаунт в Twitter" width="46" height="48"></a>
                     <a href="#"><img src="img/fb-ico.png" alt="Наша страница на Facebook" width="46" height="48"></a>
                     <a href="#"><img src="img/youtube-ico.png" alt="Наш канал на Youtube" width="46" height="48"></a>
                 </div>
             </div>
-            <div class="author_block">
+            <div class="author_block footer_block">
                 <p>WEBSITE by</p>
                 <a href="#"><img src="img/htmlacademy-logo.png" alt="Сайт разработчика" width="113" height="39"></a>
             </div>        
-        </div>
+        <!--</div>-->
     </footer>
+    </div>
 </body>
 </html>

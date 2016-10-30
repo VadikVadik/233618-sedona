@@ -2,12 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Седона</title>
 </head>
 <body>
+    <div class="container">
     <header class="main_head">
-        <div class="container">
+        <!--<div class="container">-->
             <a href="#"><img class="logo" src="img/logo.png" alt="Логотип" width="137" height="70"></a>
             <nav class="main_menu">
                 <ul>
@@ -17,18 +19,16 @@
                     <li><a href="#">Гостиницы</a></li>
                 </ul>
             </nav>
-        </div>
+        <!--</div>-->
     </header>
     <main>
-        <div class="container">
-            <div class="reasons">
-                <div class="main_description">
-                    <h3>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h3>
-                    <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-                </div>
+        <!--<div class="container">-->
+            <div class="main_bg"></div>
+            <div class="main_description">
+                <h3>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h3>
+                <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
             </div>
-            
-            <div class="reasons">
+            <div class="reasons real_city clearfix">
                 <div class="reasons_one_two">
                     <h3>Настоящий городок</h3>
                     <span>№1</span>
@@ -38,7 +38,7 @@
                      <img src="img/content-img1.jpg" alt="Город Седона" width="800" height="257">
                 </div>
             </div>
-            <div class="reasons">
+            <div class="reasons clearfix">
                 <div class="reasons_features">
                     <h3>ЖИЛЬЕ</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -52,7 +52,7 @@
                     <p>Не только китайского, но и местного производства!</p>
                 </div>
             </div>
-            <div class="reasons">
+            <div class="reasons devil_bridge clearfix">
                 <div class="reasons_img">
                     <img src="img/content-img2.jpg" alt="Мост дьявола в Седоне" width="800" height="257">
                 </div>
@@ -62,7 +62,7 @@
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </div>
             </div>
-            <div class="reasons">
+            <div class="reasons clearfix">
                 <div class="reasons_three_to_five">
                     <h3>Небольшая площадь</h3>
                     <span>№3</span>
@@ -103,25 +103,26 @@
                     </form>
                 </div>
             </div>
-        </div>    
+        <!--</div>-->    
     </main>
-    <footer class="main_footer">
-        <div class="container">
-            <div class="subscribe">
+    <footer class="main_footer clearfix">
+        <!--<div class="container clearfix">-->
+            <div class="subscribe footer_block">
                 <a href="#">#VISITSEDONA</a>
             </div>
-            <div class="social_block">
+            <div class="social_block footer_block">
                 <div class="social_icons">
                     <a href="#"><img src="img/twitter-ico.png" alt="Наш аккаунт в Twitter" width="46" height="48"></a>
                     <a href="#"><img src="img/fb-ico.png" alt="Наша страница на Facebook" width="46" height="48"></a>
                     <a href="#"><img src="img/youtube-ico.png" alt="Наш канал на Youtube" width="46" height="48"></a>
                 </div>
             </div>
-            <div class="author_block">
+            <div class="author_block footer_block">
                 <p>WEBSITE by</p>
                 <a href="#"><img src="img/htmlacademy-logo.png" alt="Сайт разработчика" width="113" height="39"></a>
             </div>        
-        </div>
+        <!--</div>-->
     </footer>
+    </div>    
 </body>
 </html>

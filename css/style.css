@@ -4,17 +4,124 @@ body{
     color: #000;
     font-weight: normal;
     font-family: "PT Sans";
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 h2, h3{
     font-weight: bold;
     text-transform: uppercase;
 }
-
 h2{
     font-size: 30px;
 }
-
 h3{
     font-size: 21px;
+    margin: 0;
+}
+header{
+    width: 88%;
+    margin: 0 auto;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 0px 50px -17px #000;
+}
+
+/* Index page */
+
+.main_bg{
+    min-height: 508px;
+    background-image: url("../img/main-bg.jpg");
+}
+.main_description{
+    width: 575px;
+    margin: 0 auto;
+    text-align: center;
+}
+.reasons{
+    text-transform: uppercase;
+    text-align: center;
+}
+.reasons_one_two{
+    width: 33.3333333333333333333%;
+    min-height: 256px;
+    background-color: #81b3d2;
+    color: #fff;
+}
+.reasons_img{
+    width: 66.6666666666666666667%;
+    height: 256px;
+    overflow: hidden;
+}
+.real_city div, .devil_bridge div{
+    float: left;
+}
+.reasons_features, .reasons_three_to_five{
+    width: 33.3333333333333333333%;
+    float: left;
+}
+.reasons_features{
+    min-height: 330px;
+}
+.reasons_three_to_five{
+    min-height: 256px;
+    background-color: #eee;
+}
+.hotel_search{
+    
+}
+.hotel_search_head{
+    width: 570px;
+    min-height: 291px;
+    margin: 0 auto;
+    text-transform: uppercase;
+    text-align: center;
+}
+.hotel_search_form{
+    width: 568px;
+    margin: 0 auto;
+}
+.footer_block{
+    width: 33.3333333333333333333%;
+    float: left;
+    text-align: center;
+    background-color: rgba(254,254,254,0.9);
+}
+
+/* Hotels page */
+
+.catalog_filter{
+    min-height: 217px;
+    background-image: url("../img/filter-bg.jpg");
+}
+.catalog_filter form, .search_result{
+    width: 1055px;
+    margin: 0 auto;
+}
+.features, .hotel_type{
+    width: 250px;
+    float: left;
+}
+.prise_and_result{
+    width: 330px;
+    float: right;
+}
+.sorting_item, .search_result_head ul li, .item_preview, .item_preview_description{
+    float: left;
+}
+.search_result_head ul li{
+    list-style: none;
+}
+
+.sort_direction, .rating{
+    float: right;
 }
