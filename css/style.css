@@ -25,15 +25,48 @@ h3{
     font-size: 21px;
     margin: 0;
 }
-header{
+.main_menu{
     width: 88%;
     margin: 0 auto;
+}
+.main_head{
+    position: relative;
+}
+.logo{
+    width: 137px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -68px;
+}
+header ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+header ul li{
+    float: left;
+    width: 128px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+header ul li:first-child, header ul li:nth-child(3){
+    margin-right: 112px;
+}
+header ul li:nth-child(2){
+    margin-right: 319px;
+}
+header ul li:nth-child(3), header ul li:last-child{
+    text-align: right;
+}
+header ul li a{
+    text-decoration: none;
 }
 .container{
     width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0px 0px 50px -17px #000;
+    box-shadow: 0px -40px 50px -15px #000;
 }
 
 /* Index page */
