@@ -23,7 +23,9 @@
     </header>
     <main>
         <!--<div class="container">-->
-            <div class="main_bg"></div>
+            <div class="main_bg">
+                <img src="img/welcome.png" alt="" width="575" height="352">
+            </div>
             <div class="main_description">
                 <h3>СЕДОНА — небольшой городок в АРИЗОНЕ, заслуживающий большего!</h3>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
@@ -31,7 +33,7 @@
             <div class="reasons real_city clearfix">
                 <div class="reasons_one_two">
                     <h3>Настоящий городок</h3>
-                    <span>№1</span>
+                    <span>— №1 —</span>
                     <p>СЕДОНА — НЕ АТTРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
                 </div>
                 <div class="reasons_img">
@@ -40,14 +42,17 @@
             </div>
             <div class="reasons clearfix">
                 <div class="reasons_features">
+                    <div class="sprite sprite-house-ico"></div>
                     <h3>ЖИЛЬЕ</h3>
                     <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                 </div>
                 <div class="reasons_features">
+                    <div class="sprite sprite-food-ico"></div>
                     <h3>ЕДА</h3>
                     <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                 </div>
                 <div class="reasons_features">
+                    <div class="sprite sprite-souvenir-ico"></div>
                     <h3>СУВЕНИРЫ</h3>
                     <p>Не только китайского, но и местного производства!</p>
                 </div>
@@ -58,24 +63,24 @@
                 </div>
                 <div class="reasons_one_two">
                     <h3>Там есть мост дьявола</h3>
-                    <span>№2</span>
+                    <span>— №2 —</span>
                     <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                 </div>
             </div>
             <div class="reasons clearfix">
                 <div class="reasons_three_to_five">
                     <h3>Небольшая площадь</h3>
-                    <span>№3</span>
+                    <span>— №3 —</span>
                     <p>ВСЕ достопримечательности находятся очень близко</p>
                 </div>
                 <div class="reasons_three_to_five">
                     <h3>Красивая дорога</h3>
-                    <span>№4</span>
+                    <span>— №4 —</span>
                     <p>ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
                 </div>
                 <div class="reasons_three_to_five">
                     <h3>Мало туристов</h3>
-                    <span>№5</span>
+                    <span>— №5 —</span>
                     <p>Большинство едет в гранд каньон и толпится там</p>
                 </div>
             </div>
@@ -83,43 +88,55 @@
             <div class="hotel_search">
                 <div class="hotel_search_head">
                     <h2>Заинтересовались?</h2>
-                    <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+                    <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
                 </div>
                 <div class="hotel_search_map">
                     <img src="img/map.jpg" alt="Седона на карте" width="1200" height="594">
                 </div>
                 <div class="hotel_search_form">
                     <a class="switch" href="#">ПОИСК ГОСТИНИЦЫ В СЕДОНЕ</a>
-                    <form action="#" method="get">
-                        <label for="check_in_date">Дата заезда:</label>
-                        <input id="check_in_date" type="text" name="check_in"><img src="img/calendar-ico.png" alt=""><br>
-                        <label for="check_out_date">Дата выезда:</label>
-                        <input id="check_out_date" type="text" name="check_out"><img src="img/calendar-ico.png" alt=""><br>
-                        <label for="adults">Взрослые:</label>
-                        <input id="adults" type="number" name="adults" min="0" step="1">
-                        <label for="children">Дети:</label>
-                        <input id="children" type="number" name="children" min="0" step="1">
-                        <button class="search_btn" type="submit">Найти</button>
+                    <form class="clearfix" action="#" method="get">
+                        <div class="check_in_out clearfix">
+                            <label for="check_in_date">Дата заезда:</label>
+                            <input id="check_in_date" type="text" name="check_in"><a class="calendar_ico" href="#"></a>
+                        </div>
+                        <div class="check_in_out clearfix">
+                            <label for="check_out_date">Дата выезда:</label>
+                            <input id="check_out_date" type="text" name="check_out"><a class="calendar_ico" href="#"></a>
+                        </div>
+                        <div class="people_count clearfix">
+                            <label for="adults">Взрослые:</label>
+                            <input id="adults" type="text" name="adults">
+                            <a class="plus" href="#"></a>
+                            <a class="minus" href="#"></a>
+                        </div>
+                        <div class="people_count clearfix">
+                            <label for="children">Дети:</label>
+                            <input id="children" type="text" name="children">
+                            <a class="plus" href="#"></a>
+                            <a class="minus" href="#"></a>
+                        </div>    
+                        <input class="search_btn" type="submit" value="найти">
                     </form>
                 </div>
             </div>
         <!--</div>-->    
     </main>
-    <footer class="main_footer clearfix">
+    <footer class="main_footer footer_absolute clearfix">
         <!--<div class="container clearfix">-->
             <div class="subscribe footer_block">
                 <a href="#">#VISITSEDONA</a>
             </div>
-            <div class="social_block footer_block">
+            <div class="social_block footer_block clearfix">
                 <div class="social_icons">
-                    <a href="#"><img src="img/twitter-ico.png" alt="Наш аккаунт в Twitter" width="46" height="48"></a>
-                    <a href="#"><img src="img/fb-ico.png" alt="Наша страница на Facebook" width="46" height="48"></a>
-                    <a href="#"><img src="img/youtube-ico.png" alt="Наш канал на Youtube" width="46" height="48"></a>
+                    <a class="social_btn social_btn_twitter" href="#">Twitter</a>
+                    <a class="social_btn social_btn_fb" href="#">Facebook</a>
+                    <a class="social_btn social_btn_youtube" href="#">Youtube</a>
                 </div>
             </div>
             <div class="author_block footer_block">
                 <p>WEBSITE by</p>
-                <a href="#"><img src="img/htmlacademy-logo.png" alt="Сайт разработчика" width="113" height="39"></a>
+                <a class="author_logo" href="#"></a>
             </div>        
         <!--</div>-->
     </footer>
