@@ -3,7 +3,7 @@ body{
     line-height: 21px;
     color: #000;
     font-weight: normal;
-    font-family: "PT Sans";
+    font-family: 'PT Sans', sans-serif;
     background-color: #f2f2f2;
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body{
     clear: both;
 }
 
-h2, h3{
+h2, h3, h4{
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -26,13 +26,19 @@ h2{
 }
 h3{
     font-size: 21px;
+    line-height: 26px;
+    margin: 0;
+}
+h4{
+    font-size: 16px;
+    line-height: 21px;
     margin: 0;
 }
 .container{
     width: 1200px;
     margin: 0 auto;
     background-color: #fff;
-    box-shadow: 0px 0px 50px -15px #000;
+    box-shadow: 0px 0px 40px -15px #000;
 }
 
 /* Header */
@@ -508,12 +514,12 @@ input[type="text"]{
     line-height: 26px;
     text-transform: uppercase;
     padding: 0 30px 0 15px;
-    box-sizing: border-box
+    box-sizing: border-box;
 }
-input[type="text"]:hover{
+.check_in_out input[type="text"]:hover, .people_count input[type="text"]:hover{
     background-color: #ebebeb;
 }
-input[type="text"]:focus{
+.check_in_out input[type="text"]:focus, .people_count input[type="text"]:focus{
     box-sizing: border-box;
     border: 2px solid #e5e5e5;
     background-color: #fff;
@@ -529,6 +535,7 @@ input[type="text"]:focus{
 .check_in_out label, .people_count label{
     float: left;
     padding: 6px 0;
+    cursor: pointer;
 }
 .calendar_ico{
     display: block;
@@ -540,6 +547,7 @@ input[type="text"]:focus{
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
     background-position: -15px -255px;
+    cursor: pointer;
     
 }
 .calendar_ico:hover{
@@ -577,6 +585,7 @@ input[name="adults"]{
     background-position: -15px -1185px;
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 .plus:hover{
     background-position: -15px -1267px;
@@ -594,6 +603,7 @@ input[name="adults"]{
     background-position: -15px -1086px;
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;
+    cursor: pointer;
 }
 .minus:hover{
     background-position: -15px -1152px;
@@ -624,6 +634,8 @@ input[name="adults"]{
 .hotel_search_map {
     width: 1200px;
     height: 594px;
+    background-image: url("../img/map.jpg");
+    background-repeat: no-repeat;
 }
 
 /* Hotels page */
@@ -635,21 +647,229 @@ input[name="adults"]{
 .catalog_filter form, .search_result{
     width: 1055px;
     margin: 0 auto;
+/*    padding: 0 72px;*/
 }
-.features, .hotel_type{
+.features, .hotel_type, .prise_and_result{
     width: 250px;
     float: left;
+    margin-top: 29px;
+    color: #fff;
+    text-transform: uppercase;
+}
+.features h4, .hotel_type h4{
+    margin-bottom: 27px;
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"] + label{
+    display: block;
+    line-height: 22px;
+    padding-left: 41px;
+    position: relative;
+    cursor: pointer;
+}
+input[type="checkbox"] + label::before{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 22px;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -15px -411px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+input[type="checkbox"]:checked + label::before{
+    background-position: -15px -463px;
 }
 .prise_and_result{
     width: 330px;
     float: right;
 }
+.prise_and_result h4{
+    margin-bottom: 9px;
+}
+.price_controls{
+    position: relative;
+    height: 36px;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    font-size: 0;
+}
+.price_controls::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 22px;
+    background-color: #fff;
+}
+.price_controls label{
+    display: inline-block;
+    font-size: 14px;
+    line-height: 38px;
+    vertical-align: top;
+    cursor: pointer;
+}
+.price_controls .min_price, .price_controls .max_price{
+    width: 90px;
+    padding-left: 65px;
+}
+.price_controls input{
+    width: 50px;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+}
+.range_controls{
+    position: relative;
+    margin-bottom: 32px;
+}
+.scale{
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.bar{
+    width: 80%;
+    height: 2px;
+    background-color: #fff;
+}
+.range_toggle{
+    position: absolute;
+    top: -9px;
+    width: 4px;
+    height: 4px;
+    background-color: #ababab;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+    cursor: pointer;
+}
+.range_toggle:hover{
+    background-color: #1c4f80;
+}
+.range_toggle_min{
+    left: 0%;
+}
+.range_toggle_max{
+    left: 80%;
+}
+.prise_and_result input[type="submit"]{
+    display: block;
+    width: 133px;
+    margin: 0 auto;
+    padding: 5px 0;
+    font: inherit;
+    color: inherit;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.prise_and_result input[type="submit"]:hover{
+    background-color: #fff;
+    color: #000;
+}
 .sorting_item, .search_result_head ul li, .item_preview, .item_preview_description{
     float: left;
 }
-.search_result_head ul li{
+.search_result_head{
+    padding: 33px 72px;
+    border-bottom: 2px solid #e5e5e5;
+}
+.search_result_item{
+    padding: 30px 72px 28px 72px;
+    border-bottom: 2px solid #e5e5e5;
+}
+.sorting_head{
+    margin-left: 50px;
+    padding: 4px 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+.sorting_type{
+    margin: 0;
+    margin-left: 40px;
+    padding: 4px 0;
+    font-size: 12px;
+    line-height: 18px;
+}
+.sorting_type li{
     list-style: none;
+    padding: 0 2px;
+    margin-right: 29px;
+}
+.sorting_type_item a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px dotted #81b3d2;
+}
+.sorting_type_active a{
+    text-decoration: none;
+    color: #81b3d2;
+    border-bottom: none;
+}
+.sorting_type_item a:hover{
+    color: #81b3d2;
+}
+.sorting_type_item a:active{
+    color: #000;
+    border: none;
 }
 .sort_direction, .rating{
     float: right;
+}
+.sort_direction{
+    font-size: 0;
+}
+.sort_direction span{
+    display: inline-block;
+    vertical-align: bottom;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;cursor: pointer;
+}
+.direction_up{
+    width: 11px;
+    height: 10px;
+    background-position: -15px -135px;
+}
+.direction_up:hover{
+    background-position: -15px -215px;
+}
+.direction_up:active{
+    background-position: -15px -175px;
+}
+.direction_down{
+    width: 11px;
+    height: 10px;
+    background-position: -15px -15px;
+    margin-left: 11px;
+}
+.direction_down:hover{
+    background-position: -15px -95px;
+}
+.direction_down:active{
+    background-position: -15px -55px;
+}
+/* Класс активного состояния стрелки сортировки */
+.direction_up_active{
+    width: 11px;
+    height: 10px;
+    background-position: -15px -175px;
+}
+.direction_down_active{
+    width: 11px;
+    height: 10px;
+    background-position: -15px -55px;
+    margin-left: 11px;
 }

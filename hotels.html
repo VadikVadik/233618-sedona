@@ -2,13 +2,14 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Седона: каталог</title>
 </head>
 <body>
     <div class="container">
     <header class="catalog_head">
-        <!--<div class="container">-->
+        
             <a class="logo" href="#"><img src="img/logo.png" alt="Логотип" width="137" height="70"></a>
             <nav class="main_menu">
                 <ul class="clearfix">
@@ -18,10 +19,10 @@
                     <li><a href="#">Гостиницы</a></li>
                 </ul>
             </nav>
-        <!--</div>-->
+        
     </header>
     <main>
-        <!--<div class="container">-->
+        
             <div class="catalog_filter clearfix">
                 <form class="clearfix" action="#" method="get" oninput="priceoutput.value=price.value">
                     <div class="features">
@@ -43,25 +44,34 @@
                         <label for="apartment">Апартаменты</label><br>
                     </div>
                     <div class="prise_and_result">
-                        <label for="price">Стоимость в сутки (Р):</label><br>
-                        <output name="priceoutput"></output><br>
-                        <input id="price" name="price" type="range" min="100" max="100000" step="100"><br>
-                        <button type="submit">Показать</button>
+                        <h4>Стоимость в сутки (Р):</h4>
+                        <div class="price_controls">
+                            <label class="min_price">от <input type="text" name="min_price" value="0"></label>
+                            <label class="max_price">до <input type="text" name="max_price" value="3000"></label>
+                        </div>
+                        <div class="range_controls">
+                            <div class="scale">
+                                <div class="bar"></div>
+                            </div>
+                            <div class="range_toggle range_toggle_min"></div>
+                            <div class="range_toggle range_toggle_max"></div>
+                        </div>
+                        <input type="submit" value="Показать">
                     </div>
                 </form>
             </div>
-            <div class="search_result">
+            <!--<div class="search_result">-->
                 <div class="search_result_head clearfix">
                     <h3 class="sorting_item">НАЙДЕНО: 3</h3>
                     <div class="sorting_head sorting_item">СОРТИРОВКА:</div>
-                    <ul class="sorting_item clearfix">
-                        <li class="active"><a href="#">ПО ЦЕНЕ</a></li>
-                        <li><a href="#">ПО ТИПУ</a></li>
-                        <li><a href="#">ПО РЕЙТИНГУ</a></li>
+                    <ul class="sorting_item sorting_type clearfix">
+                        <li class="sorting_type_active"><a href="#">ПО ЦЕНЕ</a></li>
+                        <li class="sorting_type_item"><a href="#">ПО ТИПУ</a></li>
+                        <li class="sorting_type_item"><a href="#">ПО РЕЙТИНГУ</a></li>
                     </ul>
                     <div class="sorting_item sort_direction">
-                        <a href="#"><span>1</span></a>
-                        <a href="#"><span>2</span></a>
+                        <span class="direction_up"></span>
+                        <span class="direction_down_active"></span>
                     </div>
                 </div>
                 <div class="search_result_item clearfix">
@@ -109,11 +119,11 @@
                         <div>Рейтинг: 9.2</div>                    
                     </div>
                 </div>
-            </div>
-        <!--</div>-->    
+            <!--</div>-->
+            
     </main>
     <footer class="main_footer clearfix">
-        <!--<div class="container clearfix">-->
+        
             <div class="subscribe footer_block">
                 <a href="#">#VISITSEDONA</a>
             </div>
@@ -128,7 +138,7 @@
                 <p>WEBSITE by</p>
                 <a class="author_logo" href="#"></a>
             </div>        
-        <!--</div>-->
+        
     </footer>
     </div>
 </body>
