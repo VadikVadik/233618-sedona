@@ -10,13 +10,13 @@
     <div class="container">
     <header class="catalog_head">
         
-            <a class="logo" href="/"><img src="img/logo.png" alt="Логотип" width="137" height="70"></a>
+            <a class="logo" href="index.html"><img src="img/logo.png" alt="Логотип" width="137" height="70"></a>
             <nav class="main_menu">
                 <ul class="clearfix">
-                    <li><a href="#">Информация</a></li>
-                    <li><a href="#">Фото и видео</a></li>
-                    <li><a href="#">Карта штата</a></li>
-                    <li class="active_menu"><a>Гостиницы</a></li>
+                    <li class="menu_item"><a href="#">Информация</a></li>
+                    <li class="menu_item"><a href="#">Фото и видео</a></li>
+                    <li class="menu_item"><a href="#">Карта штата</a></li>
+                    <li class="menu_item active_menu"><a>Гостиницы</a></li>
                 </ul>
             </nav>
         
@@ -24,7 +24,7 @@
     <main>
         
             <div class="catalog_filter clearfix">
-                <form class="clearfix" action="#" method="get" oninput="priceoutput.value=price.value">
+                <form class="clearfix" action="#" method="get">
                     <div class="features">
                         <h4>Инфраструктура:</h4>
                         <input id="pool" type="checkbox" name="pool">
@@ -60,12 +60,12 @@
                     </div>
                 </form>
             </div>
-            <!--<div class="search_result">-->
+            
                 <div class="search_result_head clearfix">
                     <h3 class="sorting_item">НАЙДЕНО: 3</h3>
                     <div class="sorting_head sorting_item">СОРТИРОВКА:</div>
                     <ul class="sorting_item sorting_type clearfix">
-                        <li class="sorting_type_active"><a href="#">ПО ЦЕНЕ</a></li>
+                        <li class="sorting_type_item sorting_type_active"><a href="#">ПО ЦЕНЕ</a></li>
                         <li class="sorting_type_item"><a href="#">ПО ТИПУ</a></li>
                         <li class="sorting_type_item"><a href="#">ПО РЕЙТИНГУ</a></li>
                     </ul>
@@ -82,11 +82,11 @@
                         <h3><a href="#">Amara Resort & Spa</a></h3>
                         <div class="type_and_more">
                             <span>гостиница</span>
-                            <a class="more_btn" href="#">Подробнее</a>
+                            <a href="#">Подробнее</a>
                         </div>
                         <div class="price_and_book">
                             <span>от 3500 р.</span>
-                            <a class="book_btn" href="#">Забронировать</a>
+                            <a href="#">Забронировать</a>
                         </div>
                     </div>
                     <div class="rating">
@@ -108,11 +108,11 @@
                         <h3><a href="#">Desert Quail Inn</a></h3>
                         <div class="type_and_more">
                             <span>мотель</span>
-                            <a class="more_btn" href="#">Подробнее</a>
+                            <a href="#">Подробнее</a>
                         </div>
                         <div class="price_and_book">
                             <span>от 2000 р.</span>
-                            <a class="book_btn" href="#">Забронировать</a>
+                            <a href="#">Забронировать</a>
                         </div>
                     </div>
                     <div class="rating">
@@ -131,11 +131,11 @@
                         <h3><a href="#">Villas at Poco Diablo</a></h3>
                         <div class="type_and_more">
                             <span>апартаменты</span>
-                            <a class="more_btn" href="#">Подробнее</a>
+                            <a href="#">Подробнее</a>
                         </div>    
                         <div class="price_and_book">
                             <span>от 4000 р.</span>
-                            <a class="book_btn" href="#">Забронировать</a>
+                            <a href="#">Забронировать</a>
                         </div>    
                     </div>
                     <div class="rating">
@@ -147,7 +147,7 @@
                         <div class="rating_level">Рейтинг: 9.2</div>                    
                     </div>
                 </div>
-            <!--</div>-->
+            
             
     </main>
     <footer class="main_footer clearfix">
