@@ -40,6 +40,35 @@ h4{
     background-color: #fff;
     box-shadow: 0px 0px 40px -15px #000;
 }
+@keyframes search_on{
+    0% {top: -290px;
+        padding: 0 55px;
+        box-shadow: none;}
+    50% {top: 50px;
+        padding: 25px 55px;
+        box-shadow: none;}
+    100% {top: 0;
+        padding: 55px;
+        box-shadow: 0px 7px 35px -10px #000101;}
+}
+@keyframes search_off{
+    0% {top: 0;
+        padding: 55px;
+        box-shadow: 0px 7px 35px -10px #000101;}
+    50% {top: 50px;
+        padding: 25px 55px;
+        box-shadow: none;}
+    100% {top: -290px;
+        padding: 0 55px;
+        box-shadow: none;}
+}
+@keyframes shape{
+    0%{ transform: translateX(-52%); }
+    25%{ transform: translateX(-48%); }
+    50%{ transform: translateX(-52%); }
+    75%{ transform: translateX(-48%); }
+    100%{ transform: translateX(-50%); }
+}
 
 /* Header */
 
@@ -221,13 +250,16 @@ header ul{
     position: relative;
 }
 .hotel_search_head{
-    width: 570px;
+    width: 600px;
     min-height: 291px;
     margin: 0 auto;
     padding-top: 55px;
     box-sizing: border-box;
     text-transform: uppercase;
     text-align: center;
+    background-color: #fff;
+    position: relative;
+    z-index: 2;
 }
 .hotel_search_head h2{
     margin-bottom: 30px;
@@ -238,14 +270,27 @@ header ul{
 }
 .hotel_search_form{
     position: absolute;
-    top: 205px;
+    top: 291px;
     left: 50%;
     width: 568px;
     margin: 0 auto;
     transform: translateX(-50%);
+    z-index: 1;
+}
+.hotel_search_switch {
+    position: absolute;
+    top: 205px;
+    left: 50%;
+    width: 630px;
+    margin: 0 auto;
+    background-color: #fff;
+    transform: translateX(-50%);
+    z-index: 2;
 }
 .switch{
     display: block;
+    width: 568px;
+    margin: 0 auto;
     font-size: 21px;
     font-weight: bold;
     line-height: 26px;
@@ -254,14 +299,39 @@ header ul{
     text-decoration: none;
     background-color: #766357;
     padding: 30px 0;
+    position: relative;
+    z-index: 3;
 }
 .hotel_search_form form{
     background-color: #fff;
-    padding: 55px;
     font-weight: bold;
     line-height: 26px;
     text-transform: uppercase;
+    position: absolute;
+    z-index: 1;
+}
+.js_search_error{
+    animation: shape 0.2s;
+/*
+    position: absolute;
+    top: 291px;
+    left: 50%;
+    width: 568px;
+    margin: 0 auto;
+    transform: translateX(-50%);
+*/
+}
+.js_search_on{
+    animation: search_on 0.6s;
+    top: 0;
+    padding: 55px;
     box-shadow: 0px 7px 35px -10px #000101;
+}
+.js_search_off{
+    animation: search_off 0.6s;
+    top: -290px;
+    padding: 0 55px;
+    box-shadow: none;    
 }
 input[type="text"]{
     border: none;
