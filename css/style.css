@@ -40,6 +40,17 @@ h4{
     background-color: #fff;
     box-shadow: 0px 0px 40px -15px #000;
 }
+@-webkit-keyframes search_on{
+    0% {top: -290px;
+        padding: 0 55px;
+        box-shadow: none;}
+    50% {top: 50px;
+        padding: 25px 55px;
+        box-shadow: none;}
+    100% {top: 0;
+        padding: 55px;
+        box-shadow: 0px 7px 35px -10px #000101;}
+}
 @keyframes search_on{
     0% {top: -290px;
         padding: 0 55px;
@@ -50,6 +61,17 @@ h4{
     100% {top: 0;
         padding: 55px;
         box-shadow: 0px 7px 35px -10px #000101;}
+}
+@-webkit-keyframes search_off{
+    0% {top: 0;
+        padding: 55px;
+        box-shadow: 0px 7px 35px -10px #000101;}
+    50% {top: 50px;
+        padding: 25px 55px;
+        box-shadow: none;}
+    100% {top: -290px;
+        padding: 0 55px;
+        box-shadow: none;}
 }
 @keyframes search_off{
     0% {top: 0;
@@ -62,16 +84,20 @@ h4{
         padding: 0 55px;
         box-shadow: none;}
 }
-@keyframes shape{
-    0%{ transform: translateX(-52%); }
-    25%{ transform: translateX(-48%); }
-    50%{ transform: translateX(-52%); }
-    75%{ transform: translateX(-48%); }
-    100%{ transform: translateX(-50%); }
+@-webkit-keyframes shape{
+    0%{ -webkit-transform: translateX(-52%); transform: translateX(-52%); }
+    25%{ -webkit-transform: translateX(-48%); transform: translateX(-48%); }
+    50%{ -webkit-transform: translateX(-52%); transform: translateX(-52%); }
+    75%{ -webkit-transform: translateX(-48%); transform: translateX(-48%); }
+    100%{ -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 }
-
-/* Header */
-
+@keyframes shape{
+    0%{ -webkit-transform: translateX(-52%); transform: translateX(-52%); }
+    25%{ -webkit-transform: translateX(-48%); transform: translateX(-48%); }
+    50%{ -webkit-transform: translateX(-52%); transform: translateX(-52%); }
+    75%{ -webkit-transform: translateX(-48%); transform: translateX(-48%); }
+    100%{ -webkit-transform: translateX(-50%); transform: translateX(-50%); }
+}
 .main_menu{
     width: 88%;
     margin: 0 auto;
@@ -84,7 +110,8 @@ h4{
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 header ul{
     padding: 0;
@@ -131,9 +158,6 @@ header ul{
 .active_menu a:active{
     color: rgba(118, 99, 87, 0.3);
 }
-
-/* Index page */
-
 .main_bg{
     min-height: 508px;
     background-image: url("../img/main-bg.jpg");
@@ -156,7 +180,7 @@ header ul{
     line-height: 26px;
 }
 .main_description  p{
-    margin-top: 33px;
+    margin-top: 24px;
     margin-bottom: 52px;
     color: #333;
     text-transform: uppercase;
@@ -175,18 +199,20 @@ header ul{
 }
 .reasons_one_two h3,
 .reasons_three_to_five h3{
-    margin-bottom: 26px;
+    width: 155px;
+    margin: 0 auto;
+    margin-bottom: 17px;
 }
 .reasons_one_two p,
 .reasons_three_to_five p,
 .reasons_features p{
     margin: 0;
-    padding: 0 49px;
+    padding: 0 50px;
 }
 .reasons_one_two span,
 .reasons_three_to_five span{
     display: block;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 .reasons_img{
     width: 800px;
@@ -209,7 +235,7 @@ header ul{
     box-sizing: border-box;
 }
 .reasons_features h3{
-    margin: 32px 0;
+    margin: 25px 0;
 }
 .sprite {
     background-image: url(../img/sprite.png);
@@ -274,7 +300,8 @@ header ul{
     left: 50%;
     width: 568px;
     margin: 0 auto;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 1;
 }
 .hotel_search_switch {
@@ -284,7 +311,8 @@ header ul{
     width: 630px;
     margin: 0 auto;
     background-color: #fff;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: 2;
 }
 .switch{
@@ -311,24 +339,19 @@ header ul{
     z-index: 1;
 }
 .js_search_error{
-    animation: shape 0.2s;
-/*
-    position: absolute;
-    top: 291px;
-    left: 50%;
-    width: 568px;
-    margin: 0 auto;
-    transform: translateX(-50%);
-*/
+    -webkit-animation: shape 0.2s;
+            animation: shape 0.2s;
 }
 .js_search_on{
-    animation: search_on 0.6s;
+    -webkit-animation: search_on 0.6s;
+            animation: search_on 0.6s;
     top: 0;
     padding: 55px;
     box-shadow: 0px 7px 35px -10px #000101;
 }
 .js_search_off{
-    animation: search_off 0.6s;
+    -webkit-animation: search_off 0.6s;
+            animation: search_off 0.6s;
     top: -290px;
     padding: 0 55px;
     box-shadow: none;    
@@ -466,9 +489,6 @@ input[name="adults"]{
     background-image: url("../img/map.jpg");
     background-repeat: no-repeat;
 }
-
-/* Hotels page */
-
 .catalog_filter{
     min-height: 217px;
     background-image: url("../img/filter-bg.jpg");
@@ -478,7 +498,6 @@ input[name="adults"]{
 .search_result{
     width: 1055px;
     margin: 0 auto;
-/*    padding: 0 72px;*/
 }
 .features,
 .hotel_type,
@@ -544,7 +563,8 @@ input[type="checkbox"]:checked:disabled + label::before{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 2px;
     height: 22px;
     background-color: #fff;
@@ -706,7 +726,6 @@ input[type="checkbox"]:checked:disabled + label::before{
 .direction_down:active{
     background-position: -15px -55px;
 }
-/* Класс активного состояния стрелки сортировки */
 .direction_up_active{
     width: 11px;
     height: 10px;
@@ -809,9 +828,6 @@ input[type="checkbox"]:checked:disabled + label::before{
     text-transform: uppercase;
     padding: 5px 13px;
 }
-
-/* Footer */
-
 .footer_absolute{
     position: absolute;
     bottom: 0;
@@ -853,7 +869,8 @@ input[type="checkbox"]:checked:disabled + label::before{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background-image: url("../img/sprite.png");
     background-repeat: no-repeat;    
 }
@@ -902,3 +919,4 @@ input[type="checkbox"]:checked:disabled + label::before{
 .author_logo:active{
     background-position: -15px -948px;
 }
+     
